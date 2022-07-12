@@ -15,7 +15,7 @@ const Login = () => {
                     <input type="password" name="password" required />
                 </p>
                 <p>
-                    <button id="submit_btn" type="submit">Login</button>
+                    <button id="submit_btn" type="submit"><Link to="/profile">Login</Link></button>
                 </p>
             </form>
             <footer>
