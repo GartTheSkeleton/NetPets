@@ -2,8 +2,8 @@ import './index.scss';
 
 const Navbar= () => {
     return (
-        <div>
-            Navbar
+        <div className="nav-bar">
+            <p>Navbar</p>
         </div>
     )
 }
