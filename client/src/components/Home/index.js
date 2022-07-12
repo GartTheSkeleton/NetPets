@@ -1,6 +1,6 @@
 import './index.scss';
-import Signup from '../../pages/Signup';
-import Login from '../../pages/Login';
+// import Signup from '../../pages/Signup';
+// import Login from '../../pages/Login';
 
 const Home = () => {
     return (
