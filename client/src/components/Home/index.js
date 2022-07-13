@@ -10,6 +10,7 @@ const Home = () => {
                 <Link to="/login">
                     <button className="btn">Login</button>
                 </Link>
+                <p>or</p>
                 <Link to="/register">
                     <button className="btn">Signup</button>
                 </Link>
