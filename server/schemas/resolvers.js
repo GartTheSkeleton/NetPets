@@ -1,13 +1,10 @@
+const { AuthenticationError } = require('apollo-server-express');
+const { User, Pet } = require('../models');
+
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
     
-    /*    Query: {
-          helloWorld: () => {
-            return 'Hello world!';
-          }
-        }
-      */
-
     Query: {
         me: async(parent,args,context) => {
             if (context.user) {
@@ -28,9 +25,10 @@ const resolvers = {
     Mutation: {
         createUser: async (parent, args) => {
             const user = await User.create(args);
-            const token = signToken(user);
+            //const token = signToken(user);
       
-            return { token, user };
+            //return { token, user };
+            return user;
           },
         createPet: async (parent, args) => {
             const pet = await Pet.create(args)

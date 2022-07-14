@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/net-pets',
+mongoose.connect('mongodb+srv://netpets1234:netpets1234@cluster0.e2dhy.mongodb.net/netpets_db?retryWrites=true&w=majority'
+    ,
     {
       useNewUrlParser: true, 
       useUnifiedTopology: true,
