@@ -1,14 +1,14 @@
 
 const resolvers = {
     
-        Query: {
+    /*    Query: {
           helloWorld: () => {
             return 'Hello world!';
           }
         }
-      
+      */
 
-    /* Query: {
+    Query: {
         me: async(parent,args,context) => {
             if (context.user) {
                 const userData = await User.findOne({_id: context.user._id})
@@ -26,6 +26,32 @@ const resolvers = {
         }
     },
     Mutation: {
+        createUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+      
+            return { token, user };
+          },
+        createPet: async (parent, args) => {
+            const pet = await Pet.create(args)
+            return {pet};
+        },
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+      
+            if (!user) {
+              throw new AuthenticationError('Incorrect credentials');
+            }
+      
+            const correctPw = await user.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Incorrect credentials');
+            }
+      
+            const token = signToken(user);
+            return { token, user };
+          },
         addExp: async (parent, args, context) => {
             if (context.pet) {
                 thisPet = await Pet.findByIdAndUpdate(
@@ -37,7 +63,7 @@ const resolvers = {
                 return thisPet;
             }
         }
-    } */
+    }
     
 }
 
