@@ -1,6 +1,40 @@
-.nav-bar {
-    color: white;
-    .p {
-        color: white;
+$sage: #C9CBA3;
+$peach: #FFE1A8;
+$terra: #E26D5C;
+$catawba: #723D46;
+$burg: #472D30;
+
+header {
+    background-color: $catawba;
+    border-bottom: 1px solid $terra;
+    margin-top: 0;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: row;
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+        flex: row;
+
+        .navlink {
+            text-decoration: none;
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+
+            a {
+                margin: 20px;
+                color: $peach;
+                font-weight: 600;
+                font-size: x-large;
+            }
+        }
+
+        a:hover {
+          color: $terra;  
+        }
     }
 }
