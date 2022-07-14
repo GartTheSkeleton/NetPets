@@ -8,21 +8,21 @@ const Navbar= () => {
     return (
         <header>
             <nav>
-                <NavLink className="navlink" exact="true" activeclassname="active" to="/profile">
+                <NavLink className="navlink profile-link" exact="true" activeclassname="active" to="/profile">
                     <a><FontAwesomeIcon icon={faAddressCard} />Profile</a>
                 </NavLink>
-                <NavLink className="navlink" exact="true" activeclassname="active" to="/activities">
+                <NavLink className="navlink activities-link" exact="true" activeclassname="active" to="/activities">
                     <a><FontAwesomeIcon icon={faChartBar} />Activities</a>
                 </NavLink>
-                <NavLink className="navlink" exact="true" activeclassname="active" to="/user">
+                <NavLink className="navlink user-link" exact="true" activeclassname="active" to="/user">
                     <a><FontAwesomeIcon icon={faUsers} />Users</a>
                 </NavLink>
-                <NavLink className="navlink" exact="true" activeclassname="active" to="/store">
+                <NavLink className="navlink store-link" exact="true" activeclassname="active" to="/store">
                     <a><FontAwesomeIcon icon={faStore} />Store</a>
                 </NavLink>
             </nav>
             <nav className='logout'>
-                <NavLink className="navlink" exact="true" activeclassname="active" to="/home">
+                <NavLink className="navlink" exact="true" activeclassname="active" to="/">
                     <a><FontAwesomeIcon icon={faHouse} />Home</a>
                 </NavLink>
             </nav>

@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import Activities from './components/Activities';
 import Store from './components/Store';
-import User from './components/User';
+import Users from './components/Users';
 import Login from './pages/Login';
 import Register from './pages/Signup';
 
@@ -21,7 +21,7 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/activities' element={<Activities />} />
           <Route path='/store' element={<Store />} />
-          <Route path='/user' element={<User />} />
+          <Route path='/user' element={<Users />} />
         </Route>
 
       </Routes>
