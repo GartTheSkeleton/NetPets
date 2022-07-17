@@ -4,6 +4,8 @@ import '../components/Home/index.scss'
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
+import Auth from '../utils/auth';
+
 const Login = () => {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN_USER);
@@ -27,8 +29,7 @@ const Login = () => {
             variables: { ...formState },
         });
 
-        //Auth.login(data.login.token);
-            console.log(data);
+            Auth.login(data.login.token);
         } catch (e) {
         console.error(e);
         }
