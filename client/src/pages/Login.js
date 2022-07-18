@@ -74,7 +74,7 @@ const Login = () => {
                     />
                 </div>
                 <div>
-                    <button className="sub-btn" id="submit_btn" type="submit">Login</button>
+                <Link to="/profile" className="btnText"><button className="sub-btn" id="submit_btn" type="submit">Login</button></Link>
                 </div>
             </form>
             {error && <div>Login failed</div>}

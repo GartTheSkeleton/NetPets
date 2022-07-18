@@ -78,7 +78,7 @@ const Signup = () => {
                     />
                 </p>
                 <p>
-                    <button className="sub-btn" id="submit_btn" type="submit">Register</button>
+                    <button className="sub-btn" id="submit_btn" type="submit"><Link to="/login" className="btnText">Register</Link></button>
                 </p>
             </form>
             {error && <div>Signup failed</div>}
