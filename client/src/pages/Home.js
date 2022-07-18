@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom';
 // import Signup from '../../pages/Signup';
 // import Login from '../../pages/Login';
 
+import Auth from '../utils/auth'
+
 import { useQuery } from '@apollo/client';
-import { QUERY_USERS } from '../utils/queries';
+import { QUERY_ME} from '../utils/queries';
 
 const Home = () => {
-    const { data } = useQuery(QUERY_USERS);
-
-    const users = data?.users
-    console.log(users)
 
     return (
         <div>
-            Home 
+            <h1>Welcome to NetPets!</h1>
         </div>
     )
 }
