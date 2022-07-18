@@ -30,11 +30,13 @@ header {
                 color: $peach;
                 font-weight: 600;
                 font-size: x-large;
+                text-shadow: 2px 2px black;
             }
         }
 
         a:hover {
-          color: $terra;  
+          color: $terra; 
+
         }
     }
 }
