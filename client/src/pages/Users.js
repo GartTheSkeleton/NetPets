@@ -1,6 +1,9 @@
-import './index.scss';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME} from '../utils/queries';
 
-const User = () => {
+const Users = () => {
+    const {data} = useQuery(QUERY_ME)
+    console.log(data?.me)
     return (
         <div className="container">
             <h1>User's Pet</h1>
@@ -16,4 +19,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Users

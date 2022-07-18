@@ -8,3 +8,45 @@ query users{
     }
   }
 `
+export const QUERY_ME = gql`
+query me{
+    me {
+      _id
+      username
+      friends{
+        _id
+        username
+      }
+      pets{
+        _id
+        nickname
+        species
+      }
+    }
+}`
+
+export const QUERY_USER = gql`
+query user{
+    user{
+      _id
+      username
+      friends{
+        _id
+        username
+      }
+      pets{
+        _id
+        nickname
+        species
+      }
+    }
+}`
+
+export const PET_QUERY = gql`
+query pet{
+    pet{
+      _id
+      nickname
+      species
+    }
+}`
