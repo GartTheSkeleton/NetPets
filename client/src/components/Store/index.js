@@ -1,5 +1,6 @@
 import './index.scss';
 import Merchant from '../../images/merchant.png'
+
 const Store = () => {
     return (
         <div className='container'>
