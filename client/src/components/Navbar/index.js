@@ -29,16 +29,21 @@ const Navbar= () => {
                 <NavLink className="navlink" exact="true" activeclassname="active" to="/store">
                     <a><FontAwesomeIcon icon={faStore} />Store</a>
                 </NavLink>
-            
-              
-              <a href="/" onClick={logout}>
+                <NavLink className="navlink" exact="true" activeclassname="active" to="/store">
+                <a href="/" onClick={logout}>
                 Logout
-              </a>
+                </a>
+                </NavLink>
+
+                
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
+              <NavLink className="navlink" exact="true" activeclassname="active" to="/login">
+                <a>Login</a>
+              </NavLink>
+              <NavLink className="navlink" exact="true" activeclassname="active" to="/signup">
+                <a>Signup</a></NavLink>
             </>
           )}
         </nav>
