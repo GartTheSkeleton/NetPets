@@ -26,20 +26,10 @@ query me{
 }`
 
 export const QUERY_USER = gql`
-query user{
-    user{
-      _id
-      username
-      friends{
-        _id
-        username
-      }
-      pets{
-        _id
-        nickname
-        species
-      }
-    }
+query User($username: String!) {
+  user(username: $username) {
+    username
+  }
 }`
 
 export const PET_QUERY = gql`
