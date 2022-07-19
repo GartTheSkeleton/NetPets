@@ -7,55 +7,47 @@ import { CREATE_PET } from '../utils/mutations';
 
 
 const Profile = () => {
-    const {data} = useQuery(QUERY_ME)
-    console.log(data?.me)
-    const activePet = data?.me.pets
-    let speciesDropdown = document.getElementById("speciesSelect") 
-    let nameField = document.getElementById("nickname")
+    const {data: selfData} = useQuery(QUERY_ME)
+    console.log(selfData?.me)
+    const activePet = selfData?.me.pets
+    console.log(activePet)
 
-    const [callPet, {error}] = useMutation(CREATE_PET)
+    const [species, setSpecies] = useState("")
+    const [nickname, setNickname] = useState("")
+    
+    console.log(species)
+    console.log(nickname)
 
-    const speciesFunc = async () =>{
-        speciesDropdown = document.getElementById("speciesSelect") 
-    }
-    const nameFunc = async () => {
-        nameField = document.getElementById("nickname")
-    }
-    const createPet = async (e) => {
-     
-        e.preventDefault();
-        
-        speciesDropdown = document.getElementById("speciesSelect")
-        nameField = document.getElementById("nickname")
+    const [callPet, {error, data}] = useMutation(CREATE_PET)
 
-        const myNickname = nameField.value
-        const mySpecies = speciesDropdown.value
 
-        const petData = await callPet({
-            variables: { nickname: myNickname, species: mySpecies }
-        })
 
-        console.log(petData)
-
-    }
-
-    if (activePet === null)
+    if (activePet.length === 0)
         {
             return(
                 <div>
-                    <form className='form'>
+                    <form className='form' onSubmit={e => {
+                        e.preventDefault();
+
+                        callPet({
+                            variables:{
+                                nickname, species
+                            }
+                        })
+                    }}>
                         <h2>Looks' like you dont have a pet yet.</h2>
                         <p>Select Your Species</p>
-                        <select id="speciesSelect" onChange={(e) => speciesFunc()}>
-                            <option value="species 1">species 1</option>
-                            <option value="species 2">species 2</option>
-                            <option value="species 3">species 3</option>
+                        <select id="speciesSelect" onChange={e => setSpecies(e.target.value)}>
+                            <option value=""></option>
+                            <option value="species 1">Species 1</option>
+                            <option value="species 2">Species 2</option>
+                            <option value="species 3">Species 3</option>
                         </select>
                         <p>Name Your Pet</p>
-                        <textarea id='nickname' defaultValue={"Nickname"} onChange={(e) => nameFunc()}></textarea>
-                        <p></p>
-                        <button onClick={(e) => createPet(e)}>Submit</button>
+                        <textarea id='nickname' value={nickname} onChange={e => setNickname(e.target.value)} ></textarea>
+                        <button type="submit">Submit</button>
                     </form>
+                    {data && <div>{JSON.stringify(data)}</div>}
                 </div>
                 
             )

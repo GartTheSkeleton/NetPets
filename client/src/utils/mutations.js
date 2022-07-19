@@ -25,11 +25,12 @@ export const CREATE_USER = gql`
 `;
 
 export const CREATE_PET = gql`
-  mutation createPet($nickname: String!, $species: String!) {
-    createPet(nickname: $nickname, species: $species){
+  mutation createPet($nickname: String!, $species: String!, $userId: String!) {
+    createPet(nickname: $nickname, species: $species, userId: $userId){
       _id
       nickname
       species
     }
   }
 `
+
