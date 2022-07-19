@@ -8,17 +8,20 @@ import { CREATE_PET } from '../utils/mutations';
 
 const Profile = () => {
     const {data: selfData} = useQuery(QUERY_ME)
-    console.log(selfData?.me)
+    //console.log(selfData?.me)
     const activePet = selfData?.me.pet
-    console.log(activePet)
+    const user = selfData?.me
+    
 
     const [species, setSpecies] = useState("")
     const [nickname, setNickname] = useState("")
     const userId = selfData?.me._id
+    const username = selfData?.me.username
     
-    console.log(species)
-    console.log(nickname)
-    console.log(userId)
+    //console.log(species)
+    console.log(user)
+    //console.log(userId)
+    console.log(activePet[0].nickname)
 
     const [callPet, {data}] = useMutation(CREATE_PET)
 
@@ -58,9 +61,12 @@ const Profile = () => {
         {
             return (
                 <div>
-                    <h1>Pet's Name Here</h1>
-                    <div>Pet's Picture Here</div>
-                    <p>Pet's Stats Here</p>
+                    <h1>Welcome {username}</h1>
+                    <div>
+                        <h1>Your pet's name is gi9t{activePet[0].nickname}</h1>
+                        <div>Pet's Picture Here</div>
+                        <p>Pet's Stats Here</p>
+                    </div>
                 </div>
             )
         }
