@@ -9,7 +9,7 @@ const UserSearchResult = ({searchTerm}) => {
     if (error) return <div>ERROR</div>;
     return (
         <div>
-            <div>{JSON.stringify(data)}</div>
+            <a href='/'>{JSON.stringify(data)}</a>
         </div>
     )
 }
