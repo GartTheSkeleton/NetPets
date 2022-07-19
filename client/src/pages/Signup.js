@@ -6,6 +6,7 @@ import { CREATE_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Signup = () => {
+    
     const [formState, setFormState] = useState({
         username: '',
         email: '',
@@ -31,7 +32,7 @@ const Signup = () => {
           const { data } = await createUser({
             variables: { ...formState }
           });
-          Auth.login(data.addUser.token)
+          Auth.login(data.createUser.token)
         } catch (e) {
           console.error(e);
         }
