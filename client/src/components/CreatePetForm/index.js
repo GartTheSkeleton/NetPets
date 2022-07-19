@@ -13,7 +13,7 @@ const CreatePetForm = () => {
     return (
             <div>
                 <form className='form' onSubmit={e => {
-                    // e.preventDefault();
+                     //e.preventDefault();
 
                     callPet({
                         variables:{
@@ -21,7 +21,7 @@ const CreatePetForm = () => {
                         }
                     })
                 }}>
-                    <h2>Looks' like you dont have a pet yet.</h2>
+                    <h2>It looks like you dont have a pet yet.</h2>
                     <p>Select Your Species</p>
                     <select id="speciesSelect" onChange={e => setSpecies(e.target.value)}>
                         <option value=""></option>
