@@ -20,7 +20,7 @@ const userSchema = new Schema(
         required: true,
         minlength: 5
       },
-      pets: [
+      pet: [
         {
           type: Schema.Types.ObjectId,
           ref: 'Pet'

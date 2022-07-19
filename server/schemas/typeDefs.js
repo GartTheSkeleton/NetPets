@@ -13,7 +13,7 @@ type User {
     email: String
     friendCount: Int
     friends: [User]
-    pets: [Pet]
+    pet: [Pet]
     items: [String]
 } 
 

@@ -9,29 +9,31 @@ import { CREATE_PET } from '../utils/mutations';
 const Profile = () => {
     const {data: selfData} = useQuery(QUERY_ME)
     console.log(selfData?.me)
-    const activePet = selfData?.me.pets
+    const activePet = selfData?.me.pet
     console.log(activePet)
 
     const [species, setSpecies] = useState("")
     const [nickname, setNickname] = useState("")
+    const userId = selfData?.me._id
     
     console.log(species)
     console.log(nickname)
+    console.log(userId)
 
-    const [callPet, {error, data}] = useMutation(CREATE_PET)
+    const [callPet, {data}] = useMutation(CREATE_PET)
 
 
 
-    if (activePet.length === 0)
+    if (selfData?.me.pet.length === 0)
         {
             return(
                 <div>
                     <form className='form' onSubmit={e => {
-                        e.preventDefault();
+                        // e.preventDefault();
 
                         callPet({
                             variables:{
-                                nickname, species
+                                nickname, species, userId
                             }
                         })
                     }}>

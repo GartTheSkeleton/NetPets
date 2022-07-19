@@ -9,7 +9,7 @@ const resolvers = {
         me: async(parent,args,context) => {
             if (context.user) {
                 return await User.findOne({_id: context.user._id})
-                  .populate("pets")
+                  .populate("pet")
                   .select('-__v -password')
             }
 
@@ -19,7 +19,7 @@ const resolvers = {
             return User.find()
         },
         user: async (parent, { username }) => {
-            const user = await User.findOne({username}).populate({path: "pets"})
+            const user = await User.findOne({username}).populate({path: "pet"})
             return user
         },
         pet: async (parent, {_id}) => {
