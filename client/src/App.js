@@ -1,8 +1,10 @@
-import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import NoMatch from './pages/NoMatch';
+import "bootstrap/dist/css/bootstrap.min.css";
+import './App.scss';
 
 import Store from './pages/Store';
 import Users from './pages/Users';
@@ -39,7 +41,7 @@ function App() {
     <>
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div>
           <Navbar index />
           <div className="container">
             <Routes>

@@ -9,25 +9,34 @@ header {
     border-bottom: 1px solid $terra;
     margin-top: 0;
     height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex: row;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    flex: row !important;
     
     nav {
-        display: flex;
-        justify-content: space-around;
-        flex: row;
+        display: flex !important;
+        justify-content: space-around !important;
+        flex: row !important;
 
         .navlink {
-            text-decoration: none;
-            display: flex;
-            text-align: center;
+            display: flex !important;
+            text-align: center !important;
             flex-direction: row;
+
+            .NetPets {
+                position: absolute;
+                left: 100px;
+            }
+
+            .logout {
+                position: absolute;
+                right: 100px;
+            }
 
             a {
                 margin: 20px;
-                color: $peach;
+                color: $peach !important;
                 font-weight: 600;
                 font-size: x-large;
                 text-shadow: 2px 2px black;

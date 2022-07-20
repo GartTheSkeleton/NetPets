@@ -11,9 +11,9 @@ const MyPet = () => {
   return (
     <div>
       <div>
-        <h1>Welcome {username}</h1>
+        <h1 className='name'>Welcome {username}</h1>
           <div>
-            <h1>Your pet's name is {pet}</h1>
+            <h1 className='name'>Your pet's name is {pet}</h1>
             <div>Pet's Picture Here</div>
             <p>Pet's Stats Here</p>
           </div>

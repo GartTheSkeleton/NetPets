@@ -6,7 +6,7 @@ $burg: #472D30;
 
 body {
   font-family: Calibri Light;
-  background: $sage;
+  background: $sage !important;
 }
 
 h1,
@@ -17,6 +17,8 @@ h5,
 h6 {
   font-family: Garamond ;
 }
+
+// Login/Signup start
 
 .btn-container {
   text-align: center;
@@ -104,11 +106,15 @@ h6 {
   }
 }
 
+// Login/Signup end
+
+// Home start
+
 .home-container {
   display: flex;
   justify-content: center;
 
-  h1 {
+  .home-h1 {
       margin-top: 60px;
       font-size: 45px;
       font-weight: 600;
@@ -184,3 +190,266 @@ h6 {
     transform: translate(0px, 0px);
   }
 }
+
+// Home end
+
+// Store start
+
+.App {
+  background: $sage;
+}
+
+$sage: #C9CBA3;
+$peach: #FFE1A8;
+$terra: #E26D5C;
+$catawba: #723D46;
+$burg: #472D30;
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .merchant-container {
+      margin-top: 20px;
+
+      img {
+          margin: 0 auto;
+          padding: 2px;
+          border: 4px solid $catawba;
+          border-radius: 35px;
+      }
+  }
+
+  .options {
+      display: flex;
+      margin-top: 6%;
+      .button-container {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          flex-direction: column !important;
+          .li {
+              align-items: center;
+              margin-left: 30px;
+              margin-right: 30px;
+              margin-bottom: 8px;
+              color: $catawba;
+              border: 2px solid $catawba;
+              border-radius: 15px;
+              font-size: 20px;
+              // text-shadow: 2px 2px $terra;
+              text-align: center;
+              font-weight: 600;
+              width: 200px;
+              height: 35px;
+
+              margin-top: 8px;
+                 
+          }  
+          
+          .candy {
+              background: {
+                  image: linear-gradient(to right, 
+                    transparentize($terra, 0.4),
+                    transparentize($terra, 0.4) 5%,
+                    $terra 5%, 
+                    $terra 10%,
+                    transparentize($terra, 0.4) 10%,
+                    transparentize($terra, 0.4) 15%,
+                    $terra 15%, 
+                    $terra 20%,
+                    transparentize($terra, 0.4) 20%,
+                    transparentize($terra, 0.4) 25%,
+                    $terra 25%, 
+                    $terra 30%,
+                    transparentize($terra, 0.4) 30%,
+                    transparentize($terra, 0.4) 35%,
+                    $terra 35%, 
+                    $terra 40%,
+                    transparentize($terra, 0.4) 40%,
+                    transparentize($terra, 0.4) 45%,
+                    $terra 45%, 
+                    $terra 50%,
+                    transparentize($terra, 0.4) 50%,
+                    transparentize($terra, 0.4) 55%,
+                    $terra 55%, 
+                    $terra 60%,
+                    transparentize($terra, 0.4) 60%,
+                    transparentize($terra, 0.4) 65%,
+                    $terra 65%, 
+                    $terra 70%,
+                    transparentize($terra, 0.4) 70%,
+                    transparentize($terra, 0.4) 75%,
+                    $terra 75%, 
+                    $terra 80%,
+                    transparentize($terra, 0.4) 80%,
+                    transparentize($terra, 0.4) 85%,
+                    $terra 85%, 
+                    $terra 90%,
+                    transparentize($terra, 0.4) 90%,
+                    transparentize($terra, 0.4) 95%,
+                    $terra 95%, 
+                    $terra 100%);
+                  position: 0 0;
+                  size: 100%;
+                }
+                transition: background 300ms ease-in-out;
+                
+                &:hover {
+                  background-position: 100px;
+                }
+          }
+
+          .coins {
+              background: {
+                  image: linear-gradient(to right, 
+                    transparentize(gold, 0.4),
+                    transparentize(gold, 0.4) 5%,
+                    gold 5%, 
+                    gold 10%,
+                    transparentize(gold, 0.4) 10%,
+                    transparentize(gold, 0.4) 15%,
+                    gold 15%, 
+                    gold 20%,
+                    transparentize(gold, 0.4) 20%,
+                    transparentize(gold, 0.4) 25%,
+                    gold 25%, 
+                    gold 30%,
+                    transparentize(gold, 0.4) 30%,
+                    transparentize(gold, 0.4) 35%,
+                    gold 35%, 
+                    gold 40%,
+                    transparentize(gold, 0.4) 40%,
+                    transparentize(gold, 0.4) 45%,
+                    gold 45%, 
+                    gold 50%,
+                    transparentize(gold, 0.4) 50%,
+                    transparentize(gold, 0.4) 55%,
+                    gold 55%, 
+                    gold 60%,
+                    transparentize(gold, 0.4) 60%,
+                    transparentize(gold, 0.4) 65%,
+                    gold 65%, 
+                    gold 70%,
+                    transparentize(gold, 0.4) 70%,
+                    transparentize(gold, 0.4) 75%,
+                    gold 75%, 
+                    gold 80%,
+                    transparentize(gold, 0.4) 80%,
+                    transparentize(gold, 0.4) 85%,
+                    gold 85%, 
+                    gold 90%,
+                    transparentize(gold, 0.4) 90%,
+                    transparentize(gold, 0.4) 95%,
+                    gold 95%, 
+                    gold 100%);
+                  position: 0 0;
+                  size: 100%;
+                }
+                transition: background 300ms ease-in-out;
+                
+                &:hover {
+                  background-position: 100px;
+                }
+          }
+
+          .hat {
+              background: {
+                  image: linear-gradient(to right, 
+                    transparentize($burg, 0.4),
+                    transparentize($burg, 0.4) 5%,
+                    $burg 5%, 
+                    $burg 10%,
+                    transparentize($burg, 0.4) 10%,
+                    transparentize($burg, 0.4) 15%,
+                    $burg 15%, 
+                    $burg 20%,
+                    transparentize($burg, 0.4) 20%,
+                    transparentize($burg, 0.4) 25%,
+                    $burg 25%, 
+                    $burg 30%,
+                    transparentize($burg, 0.4) 30%,
+                    transparentize($burg, 0.4) 35%,
+                    $burg 35%, 
+                    $burg 40%,
+                    transparentize($burg, 0.4) 40%,
+                    transparentize($burg, 0.4) 45%,
+                    $burg 45%, 
+                    $burg 50%,
+                    transparentize($burg, 0.4) 50%,
+                    transparentize($burg, 0.4) 55%,
+                    $burg 55%, 
+                    $burg 60%,
+                    transparentize($burg, 0.4) 60%,
+                    transparentize($burg, 0.4) 65%,
+                    $burg 65%, 
+                    $burg 70%,
+                    transparentize($burg, 0.4) 70%,
+                    transparentize($burg, 0.4) 75%,
+                    $burg 75%, 
+                    $burg 80%,
+                    transparentize($burg, 0.4) 80%,
+                    transparentize($burg, 0.4) 85%,
+                    $burg 85%, 
+                    $burg 90%,
+                    transparentize($burg, 0.4) 90%,
+                    transparentize($burg, 0.4) 95%,
+                    $burg 95%, 
+                    $burg 100%);
+                  position: 0 0;
+                  size: 100%;
+              }
+                transition: background 300ms ease-in-out;
+                
+                &:hover {
+                  background-position: 100px;
+              }
+
+              color: $peach;
+          }
+       }
+  }
+}
+
+.merchant {
+  width: 400px;
+}
+
+// Store end
+
+// User/Profile start
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .name, h2 {
+      color: $burg;
+      text-shadow: 2px 2px 5px $terra;
+      border: 3px solid $catawba;
+      text-align: center;
+  }
+
+  .name {
+      padding: 20px;
+      width: 400px; 
+      margin-top: 20px;
+      font-size: 30px;
+  }
+
+  h2 {
+      margin-top: 10px;
+      padding: 15px;
+      width: 200px;
+      font-size: 30px;
+  }
+
+  .pet-container {
+      margin-top: 20px;
+      border: 2px solid $terra;
+      padding: 100px;
+  }
+}
+
+// User/Profile end

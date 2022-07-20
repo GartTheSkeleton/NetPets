@@ -6,7 +6,7 @@ const Users = () => {
     console.log(data?.me)
     return (
         <div className="container">
-            <h1>User's Pet</h1>
+            <h1 className='name'>User's Pet</h1>
 
             <div className="pet-container">
                 <div>
