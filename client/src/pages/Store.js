@@ -12,14 +12,14 @@ const Store = () => {
             </div>
             <div className='options'>
                 <div className='button-container'>
-                    <button className="btn candy li">Candy</button>
+                    <button className="btn candy li"><p>Candy</p></button>
             
-                    <button className="btn  coins li">Coins</button>
+                    <button className="btn coins li"><p>Coins</p></button>
                 </div>
                 <div className='button-container'>
-                    <button className="btn hat li">Hat 1</button>
+                    <button className="btn hat li"><p>Hat 1</p></button>
 
-                    <button className="btn hat li">Hat 2</button>
+                    <button className="btn hat li"><p>Hat 2</p></button>
                 </div>
             </div>
         </div>

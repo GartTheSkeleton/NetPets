@@ -230,6 +230,7 @@ $burg: #472D30;
           align-items: center !important;
           flex-direction: column !important;
           .li {
+              display: flex;
               align-items: center;
               margin-left: 30px;
               margin-right: 30px;
@@ -245,6 +246,10 @@ $burg: #472D30;
               height: 35px;
 
               margin-top: 8px;
+
+              p {
+                margin: 0 auto
+              }
                  
           }  
           
@@ -453,3 +458,61 @@ $burg: #472D30;
 }
 
 // User/Profile end
+
+// CreatePetForm start
+
+.petform-h1 {
+  color: black;
+  font-weight: 700;
+}
+
+.box {
+	display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.box .inner {
+	width: 400px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 2em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: #efbb5a;
+	color: $burg;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: $peach;
+	color: $catawba;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}

@@ -33,8 +33,17 @@ const CreatePetForm = () => {
                     <textarea id='nickname' value={nickname} onChange={e => setNickname(e.target.value)} ></textarea>
                     <button type="submit">Submit</button>
                 </form> */}
-                <h1 className="text-center">It looks like you dont have a pet yet.</h1>
-                    <p className="text-center">Select Your Species</p>
+                <h1 className="text-center petform-h1">It looks like you don't have a pet yet</h1>
+                <div className='container'>
+                    <div className="box">
+                        <div className="inner">
+                            <span>Choose Your Species</span>
+                        </div>
+                        <div className="inner">
+                            <span>Choose Your Species</span>
+                        </div>
+                    </div>
+                </div>
                 <div className="row g-5 justify-content-center">
                     <PetCard
                     img="https://res.cloudinary.com/roundglass/image/upload/ar_4:3,c_fill,f_auto,g_face,q_auto/c_limit,w_auto:breakpoints_767_2560_30_5:840/v1574433524/roundglass/sustain/Scorpio2_pzasch.jpg"
