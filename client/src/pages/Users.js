@@ -1,11 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { useQuery } from '@apollo/client';
 import { useState } from 'react';
 import { DebounceInput } from 'react-debounce-input';
 import UserSearchResult from '../components/UserSearchResult';
+import { QUERY_ME, QUERY_USER } from '../utils/queries';
 
 
 const Users = () => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const {data: selfData} = useQuery(QUERY_ME)
+    const [searchTerm, setSearchTerm] = useState(selfData?.me.username);
     const [input, setInput] = useState('');
     return (
         <div>
