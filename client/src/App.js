@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import NoMatch from './pages/NoMatch';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Store from './pages/Store';
 import Users from './pages/Users';
