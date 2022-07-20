@@ -36,3 +36,11 @@ mutation CreatePet($nickname: String!, $userId: String!, $species: String!) {
 }
 `
 
+export const ADD_COINS = gql`
+mutation AddCoins($userId: ID!, $amount: Int!) {
+  addCoins(userId: $userId, amount: $amount) {
+    username
+    coins
+  }
+}
+`
