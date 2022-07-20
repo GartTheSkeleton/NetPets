@@ -15,6 +15,7 @@ type User {
     friends: [User]
     pet: [Pet]
     items: [String]
+    coins: Int
 } 
 
 type Pet {
