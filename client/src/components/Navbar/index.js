@@ -11,6 +11,7 @@ const Navbar= () => {
         Auth.logout();
       };
     return (
+      <>
         <header>
             <div className="container flex-row justify-space-between-lg justify-center align-center">
                 <nav className="text-center">
@@ -51,6 +52,7 @@ const Navbar= () => {
              
             
         </header>
+    </>
     )
 }
 

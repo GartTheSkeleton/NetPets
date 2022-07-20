@@ -10,18 +10,17 @@ const Store = () => {
         <div className='container'>
             <div className='merchant-container'>
                 <img className='merchant' src={Merchant} />
-                <p>FILLER IMAGE</p>
             </div>
             <div className='options'>
                 <div>
-                    <button className="btn li">Candy</button>
+                    <button className="btn candy li">Candy</button>
             
-                    <button className="btn li">Coins</button>
+                    <button className="btn  coins li">Coins</button>
                 </div>
                 <div>
-                        <button className="btn li">Hat 1</button>
+                    <button className="btn hat li">Hat 1</button>
 
-                        <button className="btn li">Hat 2</button>
+                    <button className="btn hat li">Hat 2</button>
                 </div>
             </div>
         </div>

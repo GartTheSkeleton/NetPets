@@ -13,6 +13,8 @@ import Register from './pages/Signup';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import Loader from 'react-loaders';
+
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
 });
@@ -35,10 +37,11 @@ const client = new ApolloClient({
 function App() {
   
   return (
+    <>
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          <Navbar />
+          <Navbar index />
           <div className="container">
             <Routes>
               <Route 
@@ -76,6 +79,8 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+    <Loader type="pacman" />
+    </>
   )
 }
 
