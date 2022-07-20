@@ -10,6 +10,7 @@ import Store from './pages/Store';
 import Users from './pages/Users';
 import Login from './pages/Login';
 import Register from './pages/Signup';
+import Activities from './pages/Activities'
 
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -66,7 +67,10 @@ function App() {
                 path="/users" 
                 element={<Users />} 
               />
-              
+              <Route
+                path="/activities"
+                element={<Activities />}
+              />
               <Route 
                 path="*" 
                 element={<NoMatch />} 

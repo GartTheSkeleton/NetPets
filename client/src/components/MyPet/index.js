@@ -10,6 +10,8 @@ const MyPet = (props) => {
   const coinCount = selfData?.me.coins
   console.log(coinCount);
 
+  
+
   let imageurl = ""
 
   const poofimg = "https://images.freeimages.com/images/large-previews/25c/abstract-flowers-2-1199959.jpg"
