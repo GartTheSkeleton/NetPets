@@ -12,7 +12,8 @@ const PetCard = (props) => {
     const [btnState, setBtnState] = useState(false);
     
     const handleSubmit = async event => {
-        event.preventDefault();
+        //event.preventDefault();
+        console.log('pet selected');
 
         try {
             await callPet({
@@ -31,27 +32,27 @@ const PetCard = (props) => {
         setBtnState(btnState => !btnState)
     }
     let toggleTextArea = btnState ? <textarea className="form-control" id='nickname' value={nickname} onChange={e => setNickname(e.target.value)} ></textarea>: null;
-    let toggleButtonText = btnState ? `Collapse` : `Name Your Pet`
+    
     
     return (
         <div className="col-12 col-md-6 col-lg-4">
-                        <div className="card">
-                            <img className="card-img-top" src={props.img} alt="Card image cap"/>
-                            <div className="card-body">
-                                <div className="form-check">
-                                    <input className="form-check-input" onChange={e => setSpecies(e.target.value)} value={props.value} type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
-                                    <label className="form-check-label" for="flexRadioDefault1">
-                                        Choose Species
-                                    </label>
-                                </div>
-                                <h2 className="card-title">{props.species}</h2>
-                                <p className="card-text">{props.details}</p>
-                                {toggleTextArea}
-                                <button className="mt-2 btn btn-dark" onClick={handleClick}>{toggleButtonText}</button>
-                                <button className="mt-2 ml-2 btn btn-dark" onClick={handleSubmit}>Submit</button>
-                            </div>
-                        </div>
+            <div className="card">
+                <img className="card-img-top" src={props.img} alt="Card image cap"/>
+                <div className="card-body">
+                    <div className="form-check">
+                        <input className="form-check-input" onChange={e => setSpecies(e.target.value)} value={props.value} onClick={handleClick} type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
+                        <label className="form-check-label" for="flexRadioDefault1">
+                            Choose Species
+                        </label>
                     </div>
+                    <h2 className="card-title">{props.species}</h2>
+                    <p className="card-text">{props.details}</p>
+                    {toggleTextArea}
+                    
+                    <button className="mt-2 ml-2 btn btn-dark" onClick={handleSubmit}>Submit</button>
+                </div>
+            </div>
+        </div>
   )
 }
 
