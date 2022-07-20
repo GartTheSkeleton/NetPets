@@ -44,6 +44,7 @@ type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth
     createPet(nickname: String!, species: String!, userId: String!): Pet
     addExp(petId: ID!): Pet
+    addCoins(userId: ID!, amount: Int!): User
 }
 
 ` 

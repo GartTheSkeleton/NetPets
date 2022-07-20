@@ -70,6 +70,13 @@ const resolvers = {
         
                 return thisPet;
             }
+        },
+        addCoins: async (parent, {userId, amount}) => {
+            thisUser = await User.findByIdAndUpdate(
+                {_id: userId},
+                {$inc: {coins: amount}}, //increments coin count
+                {new:true}
+            )
         }
     }
     
