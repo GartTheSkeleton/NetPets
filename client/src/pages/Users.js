@@ -1,20 +1,38 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useQuery } from '@apollo/client';
-import { QUERY_ME} from '../utils/queries';
+import { useState } from 'react';
+import { DebounceInput } from 'react-debounce-input';
+import UserSearchResult from '../components/UserSearchResult';
+import { QUERY_ME, QUERY_USER } from '../utils/queries';
+
 
 const Users = () => {
-    const {data} = useQuery(QUERY_ME)
-    console.log(data?.me)
+    const {data: selfData} = useQuery(QUERY_ME)
+    const [searchTerm, setSearchTerm] = useState(selfData?.me.username);
+    const [input, setInput] = useState('');
     return (
-        <div className="container">
-            <h1 className='name'>User's Pet</h1>
-
-            <div className="pet-container">
-                <div>
-                    Filler
-                </div>
-            </div>
-
-            <h2>Pet Name</h2>
+        <div>
+            <h1>Search For A User</h1>
+            <form onSubmit={(e) => {
+                e.preventDefault();
+                setSearchTerm(input);
+            }}>
+                <label>Search</label>
+                <DebounceInput
+                    debounceTimeout={300}
+                    onChange={(e) => setInput(e.target.value)}
+                    type='search'
+                    value={input}
+                />
+                <button type='submit'>
+                    Submit!
+                </button>
+            </form>
+            <br/>
+            <br/>
+                <UserSearchResult
+                    searchTerm={searchTerm}
+                />
         </div>
     )
 }

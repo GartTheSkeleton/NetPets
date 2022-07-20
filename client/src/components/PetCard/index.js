@@ -13,7 +13,8 @@ const PetCard = (props) => {
     const [btnState, setBtnState] = useState(false);
     
     const handleSubmit = async event => {
-        event.preventDefault();
+        //event.preventDefault();
+        console.log('pet selected');
 
         try {
             await callPet({

@@ -113,6 +113,7 @@ h6 {
 .home-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 
   .home-h1 {
       margin-top: 60px;
@@ -127,6 +128,10 @@ h6 {
       text-align: center;
       animation: shadows 2s ease-in infinite, move 2s ease-in infinite;
       letter-spacing: 0.4rem;
+  }
+
+  .img-fluid {
+    height: 500px;
   }
 }
 
@@ -424,6 +429,7 @@ $burg: #472D30;
 // Store end
 
 // User/Profile start
+
 .container {
   display: flex;
   flex-direction: column;
@@ -516,3 +522,5 @@ $burg: #472D30;
 		left: -100%;
 	}
 }
+
+// CreatePetForm end
