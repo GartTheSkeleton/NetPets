@@ -15,7 +15,7 @@ const Profile = () => {
             return (
                 <CreatePetForm />
             )}
-        {
+        else {
             return (
                 <MyPet />
         )}
