@@ -35,7 +35,7 @@ const Activities = () => {
             setAct("You found a Coin while jogging with your pet!")
             }
         
-        console.log(selfData)
+        console.log(selfData.me.coins)
     } 
 
 

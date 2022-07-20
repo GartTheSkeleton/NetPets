@@ -8,6 +8,8 @@ const MyPet = (props) => {
   const pet = selfData?.me.pet[0].nickname;
   const species = selfData?.me.pet[0].species;
 
+  const coinCount = selfData.me.coins;
+
   let imageurl = ""
 
   const poofimg = "https://images.freeimages.com/images/large-previews/25c/abstract-flowers-2-1199959.jpg"
@@ -37,6 +39,7 @@ const MyPet = (props) => {
   return (
     <div>
       <h1 className= 'text-center'>Welcome {username}</h1>
+        <p className= 'text-center'>Your coin inventory: {coinCount}</p>
         <div className="row justify-content-center">
           <div className="col-12 col-md-12 col-lg-6">
           <div className="card">
