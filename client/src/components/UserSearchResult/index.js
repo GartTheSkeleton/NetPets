@@ -32,11 +32,11 @@ const UserSearchResult = ({searchTerm}) => {
     if (loading) return <div>LOADING</div>;
     if (error) return <div>ERROR</div>;
     return (
-        <div>
-          <h1 className= 'text-center'>{username}'s Profile</h1>
+        <div className="container">
+          <h1 className= 'text-center name'>{username}'s Profile</h1>
             <div className="row justify-content-center">
               <div className="col-12 col-md-12 col-lg-6">
-              <div className="card">
+              <div className="card pet-container">
                   <img className="card-img-top" alt="pet" src={imageurl}/>
                   <div className="card-body">
                       <h2 className="card-title">{username}'s pet's name is {pet}</h2>

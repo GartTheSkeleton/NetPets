@@ -13,9 +13,37 @@ const CreatePetForm = () => {
   
     return (
             <div>
-              
-                <h1 className="text-center">It looks like you dont have a pet yet.</h1>
-                    <p className="text-center">Select Your Species</p>
+                {/* <form className='form' onSubmit={e => {
+                     //e.preventDefault();
+                    callPet({
+                        variables:{
+                            nickname, species, userId
+                        }
+                    })
+                }}>
+                    <h2>It looks like you dont have a pet yet.</h2>
+                    <p>Select Your Species</p>
+                    <select id="speciesSelect" onChange={e => setSpecies(e.target.value)}>
+                        <option value=""></option>
+                        <option value="species 1">Species 1</option>
+                        <option value="species 2">Species 2</option>
+                        <option value="species 3">Species 3</option>
+                    </select>
+                    <p>Name Your Pet</p>
+                    <textarea id='nickname' value={nickname} onChange={e => setNickname(e.target.value)} ></textarea>
+                    <button type="submit">Submit</button>
+                </form> */}
+                <h1 className="text-center petform-h1">It looks like you don't have a pet yet</h1>
+                <div className='container'>
+                    <div className="box">
+                        <div className="inner">
+                            <span>Choose Your Species</span>
+                        </div>
+                        <div className="inner">
+                            <span>Choose Your Species</span>
+                        </div>
+                    </div>
+                </div>
                 <div className="row g-5 justify-content-center">
                     <PetCard
                     img="https://res.cloudinary.com/roundglass/image/upload/ar_4:3,c_fill,f_auto,g_face,q_auto/c_limit,w_auto:breakpoints_767_2560_30_5:840/v1574433524/roundglass/sustain/Scorpio2_pzasch.jpg"

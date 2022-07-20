@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import Home from './pages/Home';
 import Profile from './pages/Profile';
-import NoMatch from './pages/NoMatch';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.scss';
 
@@ -14,6 +13,8 @@ import Activities from './pages/Activities'
 
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
+import Loader from 'react-loaders';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -37,10 +38,11 @@ const client = new ApolloClient({
 function App() {
   
   return (
+    <>
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Navbar />
+        <div>
+          <Navbar index />
           <div className="container">
             <Routes>
               <Route 
@@ -67,6 +69,7 @@ function App() {
                 path="/users" 
                 element={<Users />} 
               />
+<<<<<<< HEAD
               <Route
                 path="/activities"
                 element={<Activities />}
@@ -75,12 +78,16 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               />
+=======
+>>>>>>> bf82d90a9b18befe65c3a478d0923a39639f5bfe
             </Routes>
           </div>
           
         </div>
       </Router>
     </ApolloProvider>
+    <Loader type="pacman" />
+    </>
   )
 }
 
