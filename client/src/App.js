@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import Home from './pages/Home';
 import Profile from './pages/Profile';
-import NoMatch from './pages/NoMatch';
 
 import Store from './pages/Store';
 import Users from './pages/Users';
@@ -67,11 +66,6 @@ function App() {
               <Route 
                 path="/users" 
                 element={<Users />} 
-              />
-              
-              <Route 
-                path="*" 
-                element={<NoMatch />} 
               />
             </Routes>
           </div>

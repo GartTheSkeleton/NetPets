@@ -8,11 +8,9 @@ const resolvers = {
     Query: {
         me: async(parent,args,context) => {
             if (context.user) {
-                const userData = await User.findOne({_id: context.user._id})
+                return await User.findOne({_id: context.user._id})
+                  .populate("pet")
                   .select('-__v -password')
-                  .populate('pet')
-                
-                  return userData;
             }
 
             throw new AuthenticationError('Not logged in');
@@ -21,10 +19,14 @@ const resolvers = {
             return User.find()
         },
         user: async (parent, { username }) => {
-            return User.findOne({username});
+            const user = await User.findOne({username}).populate({path: "pet"})
+            return user
         },
         pet: async (parent, {_id}) => {
-            return Pet.findone({_id});
+            return Pet.findOne({_id});
+        },
+        pets: async () => {
+            return Pet.find()
         }
     },
     Mutation: {
@@ -35,9 +37,12 @@ const resolvers = {
             return { token, user };
             
           },
-        createPet: async (parent, args) => {
-            const pet = await Pet.create(args)
-            return {pet};
+        createPet: async (parent, {species, nickname, userId}) => {
+            const pet = await Pet.create({species, nickname})
+
+            const user = await User.findOneAndUpdate({_id: userId}, {$push: {pet: pet._id}}, {new:true})
+            console.log(user)
+            return user;
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });

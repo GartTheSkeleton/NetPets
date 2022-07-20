@@ -17,7 +17,7 @@ query me{
         _id
         username
       }
-      pets{
+      pet{
         _id
         nickname
         species
@@ -34,7 +34,7 @@ query user{
         _id
         username
       }
-      pets{
+      pet{
         _id
         nickname
         species
