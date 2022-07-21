@@ -1,0 +1,51 @@
+$sage: #C9CBA3;
+$peach: #FFE1A8;
+$terra: #E26D5C;
+$catawba: #723D46;
+$burg: #472D30;
+
+header {
+    background-color: $catawba;
+    border-bottom: 1px solid $terra;
+    margin-top: 0;
+    height: 90px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    flex: row !important;
+    
+    nav {
+        display: flex !important;
+        justify-content: space-around !important;
+        flex: row !important;
+
+        .navlink {
+            display: flex !important;
+            text-align: center !important;
+            flex-direction: row;
+
+            .NetPets {
+                position: absolute;
+                left: 100px;
+            }
+
+            .logout {
+                position: absolute;
+                right: 100px;
+            }
+
+            a {
+                margin: 20px;
+                color: $peach !important;
+                font-weight: 600;
+                font-size: x-large;
+                text-shadow: 2px 2px black;
+            }
+        }
+
+        a:hover {
+          color: $terra; 
+
+        }
+    }
+}
