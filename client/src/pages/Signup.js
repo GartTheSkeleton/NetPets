@@ -6,7 +6,6 @@ import { CREATE_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Signup = () => {
-    
     const [formState, setFormState] = useState({
         username: '',
         email: '',
@@ -32,7 +31,7 @@ const Signup = () => {
           const { data } = await createUser({
             variables: { ...formState }
           });
-          Auth.login(data.createUser.token)
+          Auth.login(data.addUser.token)
         } catch (e) {
           console.error(e);
         }
@@ -79,7 +78,7 @@ const Signup = () => {
                     />
                 </p>
                 <p>
-                <button className="sub-btn" id="submit_btn" type="submit">Register</button>
+                    <button className="sub-btn" id="submit_btn" type="submit">Register</button>
                 </p>
             </form>
             {error && <div>Signup failed</div>}

@@ -9,43 +9,32 @@ header {
     border-bottom: 1px solid $terra;
     margin-top: 0;
     height: 90px;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-around !important;
-    flex: row !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: row;
     
     nav {
-        display: flex !important;
-        justify-content: space-around !important;
-        flex: row !important;
+        display: flex;
+        justify-content: space-around;
+        flex: row;
 
         .navlink {
-            display: flex !important;
-            text-align: center !important;
+            text-decoration: none;
+            display: flex;
+            text-align: center;
             flex-direction: row;
-
-            .NetPets {
-                position: absolute;
-                left: 100px;
-            }
-
-            .logout {
-                position: absolute;
-                right: 100px;
-            }
 
             a {
                 margin: 20px;
-                color: $peach !important;
+                color: $peach;
                 font-weight: 600;
                 font-size: x-large;
-                text-shadow: 2px 2px black;
             }
         }
 
         a:hover {
-          color: $terra; 
-
+          color: $terra;  
         }
     }
 }

@@ -23,24 +23,3 @@ export const CREATE_USER = gql`
     }
   }
 `;
-
-export const CREATE_PET = gql`
-mutation CreatePet($nickname: String!, $userId: String!, $species: String!) {
-  createPet(nickname: $nickname, userId: $userId, species: $species) {
-    _id
-    nickname
-    species
-    exp
-    cosmetics
-  }
-}
-`
-
-export const ADD_COINS = gql`
-mutation AddCoins($userId: ID!, $amount: Int!) {
-  addCoins(userId: $userId, amount: $amount) {
-    username
-    coins
-  }
-}
-`

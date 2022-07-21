@@ -8,9 +8,11 @@ const resolvers = {
     Query: {
         me: async(parent,args,context) => {
             if (context.user) {
-                return await User.findOne({_id: context.user._id})
-                  .populate("pet")
+                const userData = await User.findOne({_id: context.user._id})
                   .select('-__v -password')
+                  .populate('pet')
+                
+                  return userData;
             }
 
             throw new AuthenticationError('Not logged in');
@@ -19,14 +21,10 @@ const resolvers = {
             return User.find()
         },
         user: async (parent, { username }) => {
-            const user = await User.findOne({username}).populate({path: "pet"})
-            return user
+            return User.findOne({username});
         },
         pet: async (parent, {_id}) => {
-            return Pet.findOne({_id});
-        },
-        pets: async () => {
-            return Pet.find()
+            return Pet.findone({_id});
         }
     },
     Mutation: {
@@ -37,12 +35,9 @@ const resolvers = {
             return { token, user };
             
           },
-        createPet: async (parent, {species, nickname, userId}) => {
-            const pet = await Pet.create({species, nickname})
-
-            const user = await User.findOneAndUpdate({_id: userId}, {$push: {pet: pet._id}}, {new:true})
-            console.log(user)
-            return user;
+        createPet: async (parent, args) => {
+            const pet = await Pet.create(args)
+            return {pet};
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
@@ -70,13 +65,6 @@ const resolvers = {
         
                 return thisPet;
             }
-        },
-        addCoins: async (parent, {userId, amount}) => {
-            thisUser = await User.findByIdAndUpdate(
-                {_id: userId},
-                {$inc: {coins: amount}}, //increments coin count
-                {new:true}
-            )
         }
     }
     

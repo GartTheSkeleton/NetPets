@@ -1,7 +1,9 @@
-import React, {  useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import '../components/Home/index.scss'
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+
 
 import Auth from '../utils/auth';
 
@@ -30,7 +32,6 @@ const Login = () => {
         });
 
             Auth.login(data.login.token);
-
             
         } catch (e) {
         console.error(e);
