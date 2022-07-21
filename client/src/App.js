@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.scss';
-import NoMatch from './pages/NoMatch';
+
 import Store from './pages/Store';
 import Users from './pages/Users';
 import Login from './pages/Login';
@@ -72,10 +72,6 @@ function App() {
               <Route
                 path="/activities"
                 element={<Activities />}
-              />
-              <Route 
-                path="*" 
-                element={<NoMatch />} 
               />
             </Routes>
           </div>
