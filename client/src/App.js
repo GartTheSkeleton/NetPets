@@ -4,11 +4,12 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.scss';
-
+import NoMatch from './pages/NoMatch';
 import Store from './pages/Store';
 import Users from './pages/Users';
 import Login from './pages/Login';
 import Register from './pages/Signup';
+import Activities from './pages/Activities'
 
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -67,6 +68,14 @@ function App() {
               <Route 
                 path="/users" 
                 element={<Users />} 
+              />
+              <Route
+                path="/activities"
+                element={<Activities />}
+              />
+              <Route 
+                path="*" 
+                element={<NoMatch />} 
               />
             </Routes>
           </div>

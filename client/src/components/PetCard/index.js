@@ -22,6 +22,7 @@ const PetCard = (props) => {
                     nickname, species, userId
                 }
             });
+            window.location.reload(false);
         } catch (e) {
             console.error(e);
         }

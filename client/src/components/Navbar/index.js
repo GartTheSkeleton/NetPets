@@ -23,7 +23,9 @@ const Navbar= () => {
                   <NavLink className="navlink" exact="true" activeclassname="active" to="/profile">
                     <a><FontAwesomeIcon icon={faAddressCard} />Profile</a>
                 </NavLink>
-                
+                <NavLink className="navlink" exact="true" activeclassname="active" to="/activities">
+                    <a><FontAwesomeIcon icon={faChartBar} />Activities</a>
+                </NavLink>
                 <NavLink className="navlink" exact="true" activeclassname="active" to="/users">
                     <a><FontAwesomeIcon icon={faUsers} />Users</a>
                 </NavLink>

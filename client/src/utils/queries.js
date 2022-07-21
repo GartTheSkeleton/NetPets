@@ -22,6 +22,8 @@ query me{
         nickname
         species
       }
+      items
+      coins
     }
 }`
 
