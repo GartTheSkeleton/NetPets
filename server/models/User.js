@@ -31,7 +31,16 @@ const userSchema = new Schema(
           type: Schema.Types.ObjectId,
           ref: 'User'
         }
-      ]
+      ],
+      items:[
+        {
+          type: String
+        }
+      ],
+      coins: {
+        type: Number,
+        default: 0
+      }
     },
     {
       toJSON: {

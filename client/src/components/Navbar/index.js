@@ -11,18 +11,21 @@ const Navbar= () => {
         Auth.logout();
       };
     return (
+      <>
         <header>
-            <div className="container flex-row justify-space-between-lg justify-center align-center">
+            <div className="container">
                 <nav className="text-center">
-                  <NavLink className="navlink" exact="true" activeclassname="active" to="/">
-                      <a><FontAwesomeIcon  />Net Pets</a>
+                  <NavLink className="navlink NetPets-container" exact="true" activeclassname="active" to="/">
+                      <a className='NetPets'><FontAwesomeIcon  />Net Pets</a>
                   </NavLink>
           {Auth.loggedIn() ? (
             <>
                   <NavLink className="navlink" exact="true" activeclassname="active" to="/profile">
                     <a><FontAwesomeIcon icon={faAddressCard} />Profile</a>
                 </NavLink>
-                
+                <NavLink className="navlink" exact="true" activeclassname="active" to="/activities">
+                    <a><FontAwesomeIcon icon={faChartBar} />Activities</a>
+                </NavLink>
                 <NavLink className="navlink" exact="true" activeclassname="active" to="/users">
                     <a><FontAwesomeIcon icon={faUsers} />Users</a>
                 </NavLink>
@@ -30,7 +33,7 @@ const Navbar= () => {
                     <a><FontAwesomeIcon icon={faStore} />Store</a>
                 </NavLink>
                 <NavLink className="navlink" exact="true" activeclassname="active" to="/store">
-                <a href="/" onClick={logout}>
+                <a href="/" onClick={logout} className='logout'>
                 Logout
                 </a>
                 </NavLink>
@@ -51,6 +54,7 @@ const Navbar= () => {
              
             
         </header>
+    </>
     )
 }
 
