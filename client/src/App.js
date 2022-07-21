@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.scss';
-import NoMatch from './pages/NoMatch';
+
 import Store from './pages/Store';
 import Users from './pages/Users';
 import Login from './pages/Login';
@@ -69,6 +69,7 @@ function App() {
                 path="/users" 
                 element={<Users />} 
               />
+<<<<<<< HEAD
               <Route
                 path="/activities"
                 element={<Activities />}
@@ -77,6 +78,8 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               />
+=======
+>>>>>>> bf82d90a9b18befe65c3a478d0923a39639f5bfe
             </Routes>
           </div>
           
