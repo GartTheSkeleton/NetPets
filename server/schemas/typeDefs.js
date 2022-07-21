@@ -13,8 +13,9 @@ type User {
     email: String
     friendCount: Int
     friends: [User]
-    pets: [Pet]
+    pet: [Pet]
     items: [String]
+    coins: Int
 } 
 
 type Pet {
@@ -35,13 +36,15 @@ type Query {
     users: [User]
     user(username: String!): User
     pet(_id: ID!): Pet
+    pets: [Pet]
   }
 
 type Mutation {
     login(email: String!, password: String!): Auth
     createUser(username: String!, email: String!, password: String!): Auth
-    createPet(nickname: String!, species: String!): Pet
+    createPet(nickname: String!, species: String!, userId: String!): Pet
     addExp(petId: ID!): Pet
+    addCoins(userId: ID!, amount: Int!): User
 }
 
 ` 
