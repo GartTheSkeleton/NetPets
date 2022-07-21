@@ -69,17 +69,10 @@ function App() {
                 path="/users" 
                 element={<Users />} 
               />
-<<<<<<< HEAD
               <Route
                 path="/activities"
                 element={<Activities />}
               />
-              <Route 
-                path="*" 
-                element={<NoMatch />} 
-              />
-=======
->>>>>>> bf82d90a9b18befe65c3a478d0923a39639f5bfe
             </Routes>
           </div>
           
