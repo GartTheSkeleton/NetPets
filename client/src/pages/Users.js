@@ -11,20 +11,20 @@ const Users = () => {
     const [searchTerm, setSearchTerm] = useState(selfData?.me.username);
     const [input, setInput] = useState('');
     return (
-        <div>
-            <h1>Search For A User</h1>
-            <form onSubmit={(e) => {
+        <div className='container'>
+            <h1 className='search-h1'>Search For A User</h1>
+            <form className="form" onSubmit={(e) => {
                 e.preventDefault();
                 setSearchTerm(input);
             }}>
-                <label>Search</label>
+                <label className='form-label'>Search</label>
                 <DebounceInput
                     debounceTimeout={300}
                     onChange={(e) => setInput(e.target.value)}
                     type='search'
                     value={input}
                 />
-                <button type='submit'>
+                <button className="search-btn" type='submit'>
                     Submit!
                 </button>
             </form>

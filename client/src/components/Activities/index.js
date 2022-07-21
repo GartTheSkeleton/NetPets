@@ -40,9 +40,11 @@ const Activities = () => {
 
 
     return (
-        <div>
-            <h2>Select the Activity you'd like to do.</h2>
-            <button onClick={actFunc}>Running</button>
+        <div className=' container activity-container'>
+            <div>
+                <h2 className='activity-h2'>Select the Activity you'd like to do.</h2>
+            </div>
+            <button className="btn" onClick={actFunc}>Running</button>
             <p>{act}</p>
         </div>
         )   
