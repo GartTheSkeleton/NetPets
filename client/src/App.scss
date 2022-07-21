@@ -579,3 +579,23 @@ $burg: #472D30;
     }
   }
 }
+
+// SearchResults end
+
+// Activities start
+
+.activity-container {
+  width: 200px;
+  .btn {
+          background: $peach;
+          font-size: 15px;
+          font-weight: 400;
+          margin-top: 15px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-right: 15px;
+          padding-left: 15px;
+          border: 2px solid $catawba;
+          cursor: pointer;
+  }
+}
