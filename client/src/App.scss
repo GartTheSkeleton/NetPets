@@ -433,6 +433,7 @@ $burg: #472D30;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 15px;
 
   .name, h2 {
       color: $burg;
@@ -460,6 +461,30 @@ $burg: #472D30;
       border: 2px solid $terra;
       padding: 100px;
   }
+
+  .card {
+    .card-body { 
+      width: 250px;
+      .user-pet {
+      width: 350px;
+      text-align: center;
+      }
+      .user-species {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: $burg;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .coin-count {
+    color: $burg;
+    text-shadow: 2px 2px 2px $terra;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
 }
 
 // User/Profile end
@@ -523,3 +548,34 @@ $burg: #472D30;
 }
 
 // CreatePetForm end
+
+// SearchResults Start
+
+.container {
+  .search-h1 {
+    color: $burg;
+  }
+
+  .form {
+    .form-label {
+      color: $burg;
+      margin: 15px;
+    }
+
+    .search-btn {
+          background: $peach;
+          font-size: 15px;
+          font-weight: 400;
+          margin-top: 15px;
+          margin-left: 15px;
+          padding-right: 15px;
+          padding-left: 15px;
+          border: 2px solid $catawba;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $terra;
+          }
+    }
+  }
+}

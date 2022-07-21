@@ -37,17 +37,16 @@ const MyPet = (props) => {
   
   
   return (
-    <div>
-      <h1 className= 'text-center'>Welcome {username}</h1>
-        <p className= 'text-center'> Coins in your inventory: {coinCount}</p>
+    <div className='container'>
+      <h1 className= 'text-center name'>Welcome {username}</h1>
+        <p className= 'text-center coin-count'> Coins in your inventory: {coinCount}</p>
         <div className="row justify-content-center">
           <div className="col-12 col-md-12 col-lg-6">
           <div className="card">
               <img className="card-img-top" src={imageurl}/>
               <div className="card-body">
-                  <h1></h1>
-                  <h2 className="card-title">Your pet's name is {pet}</h2>
-                  <p className="card-text">Species: {species}</p>
+                  <h2 className="user-pet">Your pet's name is {pet}</h2>
+                  <p className="user-species">Species: {species}</p>
               </div>
             </div>
           </div>
