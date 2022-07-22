@@ -22,7 +22,7 @@ After signing up you can choose your species, name your pet and perform certain 
 * Node
 * React
 
-## [Website](https://netpets.herokuapp.com/)
+## [Website](https://netpetsheroku.herokuapp.com/)
 
 ![ALT Text](client/src/assets/README.JPG)
 
